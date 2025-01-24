@@ -24,9 +24,6 @@ export const authOptions: AuthOptions = {
         const findUser = await prisma.user.findUnique({
           where: {
             email: user.email!,
-            name: user.name!,
-            oauth_id: account?.provider!,
-            image: user?.image!,
           },
         });
         if (findUser) {
@@ -85,4 +82,4 @@ export const authOptions: AuthOptions = {
       },
     }),
   ],
-};  
+};
